@@ -8,7 +8,7 @@ function Card({ imageUrl, title, description, isLoading }) {
       loading={isLoading}
       hoverable
       type="inner"
-      style={{ marginBottom: "20px" }}
+      style={{ margin: "15px 0" }}
       cover={<img src={imageUrl} />}
     >
       <Meta title={title} description={description} />
