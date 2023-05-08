@@ -2,10 +2,10 @@ import React from "react";
 import { Button, Card as CardComponent } from "antd";
 const { Meta } = CardComponent;
 
-function Card({ imageUrl, title, description }) {
+function Card({ imageUrl, title, description, isLoading }) {
   return (
     <CardComponent
-      //   loading={true}
+      loading={isLoading}
       hoverable
       type="inner"
       style={{ marginBottom: "20px" }}

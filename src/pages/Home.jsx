@@ -1,10 +1,10 @@
 import Card from "@/components/molecules/Card";
 import HeaderComponent from "@/components/molecules/Header";
 import { Col, Layout, Row } from "antd";
-import React from "react";
+import React, { useEffect, useState } from "react";
 const { Content } = Layout;
 function Home() {
-    
+  const [isLoading, setIsLoading] = useState(true);
   const items = [
     {
       imageUrl: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
@@ -47,6 +47,7 @@ function Home() {
       description: "Some description",
     },
   ];
+  setTimeout(() => setIsLoading(false), 3000);
   return (
     <>
       <HeaderComponent />
@@ -72,6 +73,7 @@ function Home() {
                     imageUrl={item.imageUrl}
                     title={item.title}
                     description={item.description}
+                    isLoading={isLoading}
                   />
                 </Col>
               ))}
