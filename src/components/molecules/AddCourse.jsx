@@ -20,6 +20,7 @@ function AddCourse() {
         placement="right"
         open={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
+        autoFocus={false}
         extra={
           <Space>
             <Button type="primary" onClick={() => setIsDrawerOpen(false)}>
@@ -29,14 +30,14 @@ function AddCourse() {
         }
       >
         <Space direction="vertical" style={{ display: "flex", width: "100%" }}>
-          <Input placeholder="Название курса"  />
+          <Input placeholder="Название курса" />
           <Input
             type="number"
             placeholder="Продолжительность курса"
             // size="large"
           />
-          <Input placeholder="Цена"  />
-          <TextArea rows={4} placeholder="Описание"  />
+          <Input placeholder="Цена" />
+          <TextArea rows={4} placeholder="Описание" />
         </Space>
       </Drawer>
       <Row gutter={20} style={{ justifyContent: "space-between" }}>
