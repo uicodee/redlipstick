@@ -5,8 +5,8 @@ import {
   QuestionCircleOutlined,
   MessageOutlined,
   BarChartOutlined,
+  MenuOutlined,
 } from "@ant-design/icons";
-import Logo from "@/assets/logo500.png";
 import reactLogo from "@/assets/react.svg";
 const { Header } = Layout;
 const { Link } = Typography;
@@ -67,6 +67,7 @@ function HeaderComponent() {
             style={{
               justifyContent: "end",
             }}
+            overflowedIndicator={<MenuOutlined />}
           />
         </Col>
       </Row>
